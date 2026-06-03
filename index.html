@@ -1,0 +1,500 @@
+<!DOCTYPE html><html lang="pt-BR" style=""><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Altese | Serviços Veiculares Online</title><meta name="description" content="Oferecemos serviços veiculares online exclusivos para o estado de Mato Grosso do Sul, com praticidade, segurança e agilidade. Consulte informações de veículos, situação cadastral, débitos, multas, licenciamento, restrições e outros dados importantes sem sair de casa. Nossa plataforma facilita o acesso a serviços veiculares para proprietários, compradores e vendedores, proporcionando informações confiáveis para regularização e acompanhamento da documentação do veículo em todo o estado.">
+<meta name="keywords" content="serviços veiculares Mato Grosso do Sul, consulta veículo MS, débitos veiculares MS, multas veiculares MS, licenciamento veicular MS, restrições veículo MS, documentação veicular online, situação cadastral veículo, regularização veicular, serviços online veículo MS">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Altese | Serviços Veiculares Online – Mato Grosso do Sul">
+<meta property="og:description" content="Oferecemos serviços veiculares online exclusivos para o estado de Mato Grosso do Sul, com praticidade, segurança e agilidade. Consulte informações de veículos, situação cadastral, débitos, multas, licenciamento, restrições e outros dados importantes sem sair de casa. Nossa plataforma facilita o acesso a serviços veiculares para proprietários, compradores e vendedores, proporcionando informações confiáveis para regularização e acompanhamento da documentação do veículo em todo o estado.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue: #0A2463;
+    --blue-mid: #1B4FD8;
+    --blue-light: #3B82F6;
+    --orange: #F97316;
+    --orange-dark: #EA580C;
+    --white: #FFFFFF;
+    --gray-50: #F8FAFC;
+    --gray-100: #F1F5F9;
+    --gray-200: #E2E8F0;
+    --gray-500: #64748B;
+    --gray-700: #334155;
+    --text: #0F172A;
+    --font: 'Inter', sans-serif;
+    --radius: 12px;
+    --radius-lg: 20px;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font); color: var(--text); background: var(--white); overflow-x: hidden; }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 5%; height: 72px;
+    background: rgba(10,36,99,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .nav-logo-icon {
+    width: 38px; height: 38px; background: var(--orange);
+    border-radius: 8px; display: flex; align-items: center; justify-content: center;
+  }
+  .nav-logo-icon svg { width: 22px; height: 22px; fill: white; }
+  .nav-logo-text { font-size: 1.4rem; font-weight: 800; color: var(--white); letter-spacing: -0.5px; }
+  .nav-logo-text span { color: var(--orange); }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--orange); }
+  .nav-cta {
+    background: var(--orange); color: var(--white); padding: 10px 22px;
+    border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .nav-cta:hover { background: var(--orange-dark); transform: translateY(-1px); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh; position: relative; display: flex; align-items: center;
+    padding: 72px 5% 0;
+    background: var(--blue);
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background-image: url('/api/pages/7iW-kVBRpV/assets/kfyetjy8v6o4kcr37ry7xuik');
+    background-size: cover; background-position: center;
+    opacity: 0.18;
+  }
+  .hero-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(10,36,99,0.97) 0%, rgba(10,36,99,0.75) 50%, rgba(27,79,216,0.4) 100%);
+  }
+  .hero-content { position: relative; z-index: 2; max-width: 680px; }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(249,115,22,0.15); border: 1px solid rgba(249,115,22,0.35);
+    color: var(--orange); padding: 6px 16px; border-radius: 50px;
+    font-size: 0.8rem; font-weight: 600; letter-spacing: 0.5px; margin-bottom: 28px;
+    text-transform: uppercase;
+  }
+  .hero-badge::before {
+    content: ''; width: 7px; height: 7px; background: var(--orange);
+    border-radius: 50%; animation: pulse 2s infinite;
+  }
+  @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(0.8)} }
+  .hero h1 {
+    font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 900; color: var(--white);
+    line-height: 1.1; letter-spacing: -1.5px; margin-bottom: 24px;
+  }
+  .hero h1 em { font-style: normal; color: var(--orange); }
+  .hero p {
+    font-size: 1.1rem; color: rgba(255,255,255,0.72); line-height: 1.7;
+    max-width: 520px; margin-bottom: 40px;
+  }
+  .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--orange); color: var(--white); padding: 15px 32px;
+    border-radius: var(--radius); text-decoration: none; font-weight: 700; font-size: 1rem;
+    display: inline-flex; align-items: center; gap: 8px;
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 24px rgba(249,115,22,0.35);
+  }
+  .btn-primary:hover { background: var(--orange-dark); transform: translateY(-2px); box-shadow: 0 8px 32px rgba(249,115,22,0.45); }
+  .btn-secondary {
+    background: rgba(255,255,255,0.1); color: var(--white); padding: 15px 32px;
+    border-radius: var(--radius); text-decoration: none; font-weight: 600; font-size: 1rem;
+    border: 1px solid rgba(255,255,255,0.25);
+    display: inline-flex; align-items: center; gap: 8px;
+    transition: background 0.2s, transform 0.2s;
+    backdrop-filter: blur(8px);
+  }
+  .btn-secondary:hover { background: rgba(255,255,255,0.18); transform: translateY(-2px); }
+  .hero-stats {
+    position: absolute; bottom: 48px; left: 5%; right: 5%; z-index: 2;
+    display: flex; gap: 40px;
+  }
+  .hero-stat { color: var(--white); }
+  .hero-stat strong { display: block; font-size: 2rem; font-weight: 900; color: var(--orange); }
+  .hero-stat span { font-size: 0.85rem; color: rgba(255,255,255,0.6); font-weight: 500; }
+
+  /* SERVICES */
+  .services { padding: 100px 5%; background: var(--gray-50); }
+  .section-header { text-align: center; margin-bottom: 64px; }
+  .section-tag {
+    display: inline-block; background: rgba(27,79,216,0.08); color: var(--blue-mid);
+    padding: 6px 18px; border-radius: 50px; font-size: 0.8rem; font-weight: 700;
+    letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 16px;
+  }
+  .section-header h2 {
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 900; color: var(--blue);
+    letter-spacing: -1px; margin-bottom: 16px;
+  }
+  .section-header h2 em { font-style: normal; color: var(--orange); }
+  .section-header p { color: var(--gray-500); font-size: 1.05rem; max-width: 500px; margin: 0 auto; line-height: 1.7; }
+  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1100px; margin: 0 auto; }
+  .service-card {
+    background: var(--white); border-radius: var(--radius-lg); padding: 36px 30px;
+    border: 1px solid var(--gray-200);
+    transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+    position: relative; overflow: hidden;
+  }
+  .service-card::after {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--orange), var(--blue-light));
+    transform: scaleX(0); transform-origin: left; transition: transform 0.3s;
+  }
+  .service-card:hover { transform: translateY(-6px); box-shadow: 0 20px 48px rgba(10,36,99,0.12); border-color: rgba(249,115,22,0.2); }
+  .service-card:hover::after { transform: scaleX(1); }
+  .service-icon {
+    width: 56px; height: 56px; border-radius: 14px; margin-bottom: 24px;
+    display: flex; align-items: center; justify-content: center;
+    background: linear-gradient(135deg, rgba(249,115,22,0.1), rgba(27,79,216,0.08));
+  }
+  .service-icon svg { width: 28px; height: 28px; }
+  .service-card h3 { font-size: 1.1rem; font-weight: 700; color: var(--blue); margin-bottom: 12px; }
+  .service-card p { color: var(--gray-500); font-size: 0.92rem; line-height: 1.7; margin-bottom: 20px; }
+  .service-link {
+    color: var(--orange); font-weight: 600; font-size: 0.88rem; text-decoration: none;
+    display: inline-flex; align-items: center; gap: 6px; transition: gap 0.2s;
+  }
+  .service-link:hover { gap: 10px; }
+
+  /* CONTACT */
+  .contact { padding: 100px 5%; background: var(--blue); position: relative; overflow: hidden; }
+  .contact::before {
+    content: ''; position: absolute; top: -200px; right: -200px;
+    width: 600px; height: 600px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(249,115,22,0.12) 0%, transparent 70%);
+  }
+  .contact-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; position: relative; z-index: 1; }
+  .contact-info .section-tag { background: rgba(249,115,22,0.15); color: var(--orange); }
+  .contact-info h2 { font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 900; color: var(--white); letter-spacing: -1px; margin-bottom: 20px; }
+  .contact-info h2 em { font-style: normal; color: var(--orange); }
+  .contact-info > p { color: rgba(255,255,255,0.65); font-size: 1rem; line-height: 1.7; margin-bottom: 40px; }
+  .contact-details { display: flex; flex-direction: column; gap: 20px; }
+  .contact-item {
+    display: flex; align-items: flex-start; gap: 16px;
+    background: rgba(255,255,255,0.06); border-radius: var(--radius);
+    padding: 18px 20px; border: 1px solid rgba(255,255,255,0.08);
+    transition: background 0.2s;
+  }
+  .contact-item:hover { background: rgba(255,255,255,0.1); }
+  .contact-item-icon {
+    width: 44px; height: 44px; border-radius: 10px; background: rgba(249,115,22,0.15);
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .contact-item-icon svg { width: 20px; height: 20px; stroke: var(--orange); fill: none; }
+  .contact-item-body label { display: block; font-size: 0.75rem; color: rgba(255,255,255,0.45); font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 4px; }
+  .contact-item-body a, .contact-item-body p { color: var(--white); font-weight: 600; font-size: 0.95rem; text-decoration: none; transition: color 0.2s; }
+  .contact-item-body a:hover { color: var(--orange); }
+  .contact-item-body span { display: block; color: rgba(255,255,255,0.5); font-size: 0.82rem; font-weight: 400; margin-top: 2px; }
+
+  /* FORM */
+  .contact-form { background: var(--white); border-radius: var(--radius-lg); padding: 44px; box-shadow: 0 24px 64px rgba(0,0,0,0.25); }
+  .contact-form h3 { font-size: 1.4rem; font-weight: 800; color: var(--blue); margin-bottom: 8px; }
+  .contact-form > p { color: var(--gray-500); font-size: 0.9rem; margin-bottom: 28px; line-height: 1.6; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+  .form-group label { font-size: 0.82rem; font-weight: 600; color: var(--blue); letter-spacing: 0.3px; }
+  .form-group input, .form-group select, .form-group textarea {
+    padding: 12px 16px; border: 1.5px solid var(--gray-200);
+    border-radius: 10px; font-family: var(--font); font-size: 0.92rem; color: var(--text);
+    background: var(--gray-50); transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+  }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    border-color: var(--orange); box-shadow: 0 0 0 3px rgba(249,115,22,0.12);
+    background: var(--white);
+  }
+  .form-group textarea { resize: vertical; min-height: 100px; }
+  .form-group select { cursor: pointer; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2364748B' d='M6 8L1 3h10z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; }
+  .form-full { grid-column: 1/-1; }
+  .btn-submit {
+    width: 100%; padding: 15px; background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+    color: var(--white); border: none; border-radius: var(--radius); font-family: var(--font);
+    font-size: 1rem; font-weight: 700; cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 20px rgba(249,115,22,0.35);
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+  }
+  .btn-submit:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(249,115,22,0.45); }
+
+  /* FOOTER */
+  footer {
+    background: #070F1E; color: rgba(255,255,255,0.5); padding: 48px 5%;
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px;
+  }
+  .footer-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .footer-logo-icon { width: 32px; height: 32px; background: var(--orange); border-radius: 7px; display: flex; align-items: center; justify-content: center; }
+  .footer-logo-icon svg { width: 18px; height: 18px; fill: white; }
+  .footer-brand { font-size: 1.15rem; font-weight: 800; color: var(--white); }
+  .footer-brand span { color: var(--orange); }
+  footer p { font-size: 0.85rem; }
+  .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+  .footer-links a { color: rgba(255,255,255,0.4); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--orange); }
+
+  /* MAP STRIP */
+  .map-strip { height: 240px; width: 100%; position: relative; }
+  .map-strip iframe { width: 100%; height: 100%; border: 0; filter: grayscale(30%) contrast(1.1); }
+  .map-overlay {
+    position: absolute; top: 20px; left: 5%; background: var(--white);
+    border-radius: var(--radius); padding: 14px 20px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    display: flex; align-items: center; gap: 12px;
+  }
+  .map-overlay svg { width: 18px; height: 18px; stroke: var(--orange); fill: none; }
+  .map-overlay p { font-size: 0.85rem; font-weight: 600; color: var(--blue); line-height: 1.4; }
+  .map-overlay span { display: block; font-weight: 400; color: var(--gray-500); }
+
+  @media (max-width: 900px) {
+    .services-grid { grid-template-columns: 1fr 1fr; }
+    .contact-inner { grid-template-columns: 1fr; gap: 40px; }
+    .nav-links { display: none; }
+    .hero-stats { flex-wrap: wrap; gap: 24px; }
+  }
+  @media (max-width: 600px) {
+    .services-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 2rem; }
+    .hero-stats { bottom: 24px; }
+    footer { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+<style id="htmlpub-breakpoint-visibility">@media (max-width: 767px) { .hp-hide-mobile { display: none !important; } }
+@media (min-width: 768px) and (max-width: 1199px) { .hp-hide-tablet { display: none !important; } }
+@media (min-width: 1200px) { .hp-hide-desktop { display: none !important; } }</style></head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"></path></svg>
+    </div>
+    <span class="nav-logo-text">alte<span>se</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#servicos">Serviços</a></li>
+    <li><a href="#contato">Contato</a></li>
+    <li><a href="#localizacao">Localização</a></li>
+  </ul>
+  <a href="#contato" class="nav-cta">Solicitar Atendimento</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" style="background-image: linear-gradient(135deg, rgba(0,51,153,0.82) 0%, rgba(0,102,204,0.65) 50%, rgba(255,102,0,0.45) 100%), url(/api/pages/7iW-kVBRpV/assets/kfyetjy8v6o4kcr37ry7xuik);">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay" style=""></div>
+  <div class="hero-content">
+    <div class="hero-badge">Atendimento Veicular Online</div>
+    <h1>Seu veículo em <em>boas mãos,</em> de onde você estiver</h1>
+    <p>Serviços veiculares completos com atendimento digital ágil, transparente e sem complicação. Da consulta à resolução, tudo online.</p>
+    <div class="hero-actions">
+      <a href="#contato" class="btn-primary">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        Falar com Especialista
+      </a>
+      <a href="tel:+552121225333" class="btn-secondary">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.64 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 7.09 7.09l1.07-1.07a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        (21) 2122-5333
+      </a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <strong>100%</strong>
+      <span>Online e Digital</span>
+    </div>
+    <div class="hero-stat">
+      <strong>24h</strong>
+      <span>Atendimento Rápido</span>
+    </div>
+    <div class="hero-stat">
+      <strong>RJ</strong>
+      <span>Rio de Janeiro</span>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="servicos">
+  <div class="section-header">
+    <span class="section-tag">Nossos Serviços</span>
+    <h2>Tudo que seu <em>veículo precisa</em></h2>
+    <p>Soluções completas de atendimento veicular com agilidade e transparência no processo.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="2"><path d="M9 12l2 2 4-4"></path><path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9c1.52 0 2.95.38 4.2 1.04"></path><path d="M22 4L12 14.01l-3-3"></path></svg>
+      </div>
+      <h3>Vistoria Veicular</h3>
+      <p>Laudo técnico completo do seu veículo com análise detalhada e relatório digital enviado por e-mail.</p>
+      <a href="#contato" class="service-link">Solicitar vistoria <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#1B4FD8" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"></rect><path d="M8 21h8M12 17v4"></path></svg>
+      </div>
+      <h3>Licenciamento Online</h3>
+      <p>Orientação completa para licenciamento do veículo, documentação e acompanhamento digital do processo.</p>
+      <a href="#contato" class="service-link">Saiba mais <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+      </div>
+      <h3>Revisão e Manutenção</h3>
+      <p>Agende revisões preventivas e acompanhe o histórico completo de manutenção do seu veículo.</p>
+      <a href="#contato" class="service-link">Agendar revisão <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#1B4FD8" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+      </div>
+      <h3>Transferência de Veículo</h3>
+      <p>Assessoria completa para transferência de propriedade com toda a documentação organizada e sem filas.</p>
+      <a href="#contato" class="service-link">Iniciar transferência <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14,2 14,8 20,8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10,9 9,9 8,9"></polyline></svg>
+      </div>
+      <h3>Regularização Veicular</h3>
+      <p>Resolva pendências, multas e débitos do seu veículo com suporte especializado e atendimento personalizado.</p>
+      <a href="#contato" class="service-link">Regularizar agora <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#1B4FD8" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v4l3 3"></path></svg>
+      </div>
+      <h3>Consulta de Débitos</h3>
+      <p>Consulte multas, IPVA, seguro obrigatório e outros débitos do seu veículo de forma rápida e segura.</p>
+      <a href="#contato" class="service-link">Consultar débitos <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contato">
+  <div class="contact-inner">
+    <div class="contact-info">
+      <span class="section-tag">Fale Conosco</span>
+      <h2>Atendimento <em>rápido</em> e sem burocracia</h2>
+      <p>Nossa equipe está pronta para te ajudar. Entre em contato pelo formulário, e-mail ou telefone — respondemos com agilidade.</p>
+      <div class="contact-details">
+        <div class="contact-item">
+          <div class="contact-item-icon">
+            <svg viewBox="0 0 24 24" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-10 7L2 7"></path></svg>
+          </div>
+          <div class="contact-item-body">
+            <label>E-mail</label>
+            <a href="/cdn-cgi/l/email-protection#e180858c888f88929593809588978ea1808d95849284cf828e8ccf8393"><span class="__cf_email__" data-cfemail="3253565f5b5c5b41464053465b445d72535e465741571c515d5f1c5040">[email&#160;protected]</span></a>
+            <span>Respondemos em até 24h</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">
+            <svg viewBox="0 0 24 24" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.64 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 7.09 7.09l1.07-1.07a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          </div>
+          <div class="contact-item-body">
+            <label>Telefone</label>
+            <a href="tel:+552121225333">(21) 2122-5333</a>
+            <span>Segunda a sexta, horário comercial</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">
+            <svg viewBox="0 0 24 24" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          </div>
+          <div class="contact-item-body">
+            <label>Endereço</label>
+            <p>Av. Lobo Junior, 1256 — Penha</p>
+            <span>Rio de Janeiro, RJ — CEP 21020-122</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form">
+      <h3>Solicite Atendimento</h3>
+      <p>Preencha o formulário e entraremos em contato o mais breve possível.</p>
+      <form name="solicitacao-atendimento" data-success-message="Solicitação recebida! Em breve nossa equipe entrará em contato.">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nome">Nome completo</label>
+            <input type="text" id="nome" name="nome_completo" placeholder="João Silva" required="">
+          </div>
+          <div class="form-group">
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(21) 9 0000-0000">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="joao@email.com" required="">
+        </div>
+        <div class="form-group">
+          <label for="servico">Tipo de serviço</label>
+          <select id="servico" name="tipo_servico" required="">
+            <option value="">Selecione o serviço desejado</option>
+            <option value="vistoria">Vistoria Veicular</option>
+            <option value="licenciamento">Licenciamento</option>
+            <option value="revisao">Revisão e Manutenção</option>
+            <option value="transferencia">Transferência de Veículo</option>
+            <option value="regularizacao">Regularização Veicular</option>
+            <option value="consulta_debitos">Consulta de Débitos</option>
+            <option value="outros">Outros</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="placa">Placa do veículo</label>
+          <input type="text" id="placa" name="placa_veiculo" placeholder="ABC-1234">
+        </div>
+        <div class="form-group">
+          <label for="mensagem">Descreva sua necessidade</label>
+          <textarea id="mensagem" name="mensagem" placeholder="Informe detalhes sobre seu veículo e o que precisa..."></textarea>
+        </div>
+        <button type="submit" class="btn-submit">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22,2 15,22 11,13 2,9"></polygon></svg>
+          Enviar Solicitação
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<div class="map-strip" id="localizacao">
+  <iframe src="https://maps.google.com/maps?q=Avenida+Lobo+Junior+1256+Penha+Rio+de+Janeiro&amp;output=embed" loading="lazy" title="Localização Altese"></iframe>
+  <div class="map-overlay">
+    <svg viewBox="0 0 24 24" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+    <p>Av. Lobo Junior, 1256 — Penha<span>Rio de Janeiro, RJ — CEP 21020-122</span></p>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <a href="#" class="footer-logo">
+    <div class="footer-logo-icon">
+      <svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"></path></svg>
+    </div>
+    <span class="footer-brand">alte<span>se</span></span>
+  </a>
+  <p>© 2025 Altese. Todos os direitos reservados.</p>
+  <div class="footer-links">
+    <a href="/cdn-cgi/l/email-protection#5031343d393e39232422312439263f10313c243523357e333f3d7e3222"><span class="__cf_email__" data-cfemail="97f6f3fafef9fee4e3e5f6e3fee1f8d7f6fbe3f2e4f2b9f4f8fab9f5e5">[email&#160;protected]</span></a>
+    <a href="tel:+552121225333">(21) 2122-5333</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#contato">Contato</a>
+  </div>
+</footer>
+
+
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body></html>
